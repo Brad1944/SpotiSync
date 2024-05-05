@@ -13,6 +13,10 @@ repositories {
     maven("https://jitpack.io")
 }
 
+tasks.shadowJar {
+    minimize()
+}
+
 tasks.build {
     dependsOn(tasks.shadowJar)
 }
