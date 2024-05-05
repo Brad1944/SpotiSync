@@ -1,4 +1,4 @@
-package org.example
+package top.apip.spotisync
 
 import com.github.kiulian.downloader.YoutubeDownloader
 import com.github.kiulian.downloader.downloader.YoutubeProgressCallback
