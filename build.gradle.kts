@@ -1,3 +1,5 @@
+import org.jetbrains.kotlin.com.intellij.openapi.vfs.StandardFileSystems.jar
+
 plugins {
     kotlin("jvm") version "1.9.23"
     id("com.github.johnrengelman.shadow") version "7.1.2"
@@ -21,6 +23,12 @@ dependencies {
     implementation("com.github.sealedtx:java-youtube-downloader:3.2.3")
     // Commons lang
     implementation("org.apache.commons:commons-lang3:+")
+}
+
+tasks.withType<Jar> {
+    manifest {
+        attributes["Main-Class"] = "top.apip.spotisync.MainKt"
+    }
 }
 
 tasks.test {
